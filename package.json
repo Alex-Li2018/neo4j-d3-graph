@@ -1,0 +1,30 @@
+{
+  "name": "neo4j-d3-graph",
+  "version": "1.0.0",
+  "description": "基于d3.js的封装的图数据库的可视化界面,不依赖任何外部框架如: vue, react等;内部实现了节点的展示",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "build:dev": "cross-env NODE_ENV=development rollup --config ./build/rollup.config.js",
+    "build:pro": "cross-env NODE_ENV=production rollup --config ./build/rollup.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alex-Li2018/neo4j-d3-graph.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alex-Li2018/neo4j-d3-graph/issues"
+  },
+  "homepage": "https://github.com/Alex-Li2018/neo4j-d3-graph#readme",
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "rollup-plugin-scss": "^3.0.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.50.0"
+  }
+}
