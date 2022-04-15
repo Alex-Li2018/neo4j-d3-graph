@@ -1,6 +1,7 @@
 # neo4jd3.js
 
-![preview](./img/preview.png)
+![preview](./img/preview.png)<br/>
+
 基于d3.js的封装的图数据库的可视化界面,不依赖任何外部框架如: vue, react等;内部实现了节点的展示
 
 ## Code structure
