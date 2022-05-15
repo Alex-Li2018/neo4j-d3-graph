@@ -147,11 +147,17 @@
             .on('dblclick', (e, d) => {
                 self.fixNodes(d)
 
+                if (typeof self.options.onNodeDoubleClick === 'function') {
+                    self.options.onNodeDoubleClick(e, d, d3)
+                }
+
                 // 先清楚所有的操作栏
                 d3.selectAll('.context-menu-item')
                     .each(function () {
                         d3.select(this).classed('context-show', false)
                     })
+
+                
 
                 if (!d.properties4show || !d.properties4show.length) return
 
@@ -173,10 +179,6 @@
                         status: !!ishowAttr.length,
                         metaData: d,
                     })
-                }
-
-                if (typeof self.options.onNodeDoubleClick === 'function') {
-                    self.options.onNodeDoubleClick(e, d, d3)
                 }
 
                 e.stopPropagation()
