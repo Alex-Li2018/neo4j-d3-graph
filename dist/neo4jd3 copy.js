@@ -146,7 +146,7 @@
 
             if (!isAttr) {
                 // 添加点击之后的菜单栏
-                this.appendMenuToNode(n);
+                this.options.showNodePlate && this.appendMenuToNode(n);
             }
 
             // 显示图例
@@ -1888,6 +1888,8 @@
         constructor(_selection, _options) {
             super();
             this.options = {
+                // 是否显示表盘
+                showNodePlate: true,
                 // 箭头宽度
                 arrowSize: 4,
                 // 颜色

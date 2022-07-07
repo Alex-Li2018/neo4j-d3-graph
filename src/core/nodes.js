@@ -67,7 +67,7 @@
 
         if (!isAttr) {
             // 添加点击之后的菜单栏
-            this.appendMenuToNode(n)
+            this.options.showNodePlate && this.appendMenuToNode(n)
         }
 
         // 显示图例

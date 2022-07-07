@@ -17,6 +17,8 @@ export default class Neo4jD3 extends mix(Nodes, NodesPlate, RelationShips, TextW
     constructor(_selection, _options) {
         super()
         this.options = {
+            // 是否显示表盘
+            showNodePlate: true,
             // 箭头宽度
             arrowSize: 4,
             // 颜色

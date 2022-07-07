@@ -38,6 +38,7 @@
 - 文案超长显示tooltip
 - 两个节点多条边的展示
 - 一个节点多条边指向自己
+- 表盘支持设置显示与不显示 showNodePlate
 
 
 ## Documentation
@@ -61,6 +62,7 @@ const neo4jd3 = new Neo4jd3('.selector', options);
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
+| **showNodePlate** | *boolean* | 是否显示表盘 默认值 true |
 | **highlight** | *array* | Highlight several nodes of the graph.<br>Example:<br>`[`<br>&nbsp;&nbsp;&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`class: 'Project',`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`id: 'nodes id',`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}]` |
 | **highlightRelationShip** | *array* | Highlight several relationsship of the graph.<br>Example:<br>`[`<br>&nbsp;&nbsp;&nbsp;&nbsp;`{`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`class: 'Project',`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`id: 'relationsship id',`<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}]` |
 | **minCollision** | *int* | 节点之间的最下距离。默认值: 2 * *nodeRadius*. |
