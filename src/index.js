@@ -245,6 +245,18 @@ export default class Neo4jD3 extends mix(Nodes, NodesPlate, RelationShips, TextW
         this.updateNodesAndRelationships(d3Data.nodes, d3Data.relationships)
     }
 
+    updateGraphWithD3Data(neo4jData) {
+        const { nodes, relationships } = this.neo4jDataToD3Data(neo4jData)
+
+        this.updateRelationships(relationships, true)
+        this.updateNodes(nodes, false, true)
+
+        this.simulation.nodes(this.nodes)
+        this.simulation
+            .force('link')
+            .links(this.relationships)
+    }
+
     // 渲染nodes 以及 relationships
     updateNodesAndRelationships(n, r) {
         this.updateRelationships(r)
