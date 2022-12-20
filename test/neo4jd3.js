@@ -198,6 +198,8 @@
                         return
                     }
 
+                    d3.select(this).classed('selected', !d3.select(this).classed('selected'))
+
 
                     // 显示当前的操作栏
                     d3.select(this)

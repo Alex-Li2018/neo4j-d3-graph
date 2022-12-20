@@ -197,7 +197,8 @@
                         d.nodeType === 'iconfont' && typeof self.options.onIconfontClick === 'function' && self.options.onIconfontClick(d);
                         return
                     }
-
+                    
+                    d3.select(this).classed('selected', !d3.select(this).classed('selected'));
 
                     // 显示当前的操作栏
                     d3.select(this)
@@ -2114,6 +2115,18 @@
 
         updateWithD3Data(d3Data) {
             this.updateNodesAndRelationships(d3Data.nodes, d3Data.relationships);
+        }
+
+        updateGraphWithD3Data(neo4jData) {
+            const { nodes, relationships } = this.neo4jDataToD3Data(neo4jData);
+
+            this.updateRelationships(relationships, true);
+            this.updateNodes(nodes, false, true);
+
+            this.simulation.nodes(this.nodes);
+            this.simulation
+                .force('link')
+                .links(this.relationships);
         }
 
         // 渲染nodes 以及 relationships
